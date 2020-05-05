@@ -1,0 +1,2 @@
+echo 'You forgot a shebang.'
+exit(1)

@@ -1,0 +1,26 @@
+#!/usr/bin/env ipd
+
+import sys
+import pathlib
+
+import pandas as pd
+
+
+FORMAT_MAPPING = {
+    ".csv": pd.read_csv,
+    ".parquet": pd.read_parquet,
+    ".xlsx": pd.read_excel,
+    ".json": pd.read_json,
+    ".feather": pd.read_feather,
+}
+
+
+def read_file(filename):
+
+    path = pathlib.Path(filename)
+    reader = FORMAT_MAPPING[path.suffix]
+    return reader(path)
+
+
+if __name__ == "__main__":
+    df = read_file(sys.argv[-1])

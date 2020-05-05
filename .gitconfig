@@ -1,0 +1,39 @@
+[user]
+	name = adamboche
+	email = adamboche@gmail.com
+[core]
+	editor = emacs
+
+
+
+[alias]
+lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+sw = switch
+rs = restore
+st = status
+cm = commit
+pu = push
+ch = checkout
+br = branch
+me = merge
+di = diff
+unstage = reset HEAD --
+last = log -1 HEAD
+utccommit = !git commit --date=\"$(date --utc +%Y-%m-%dT%H:%M:%S%z)\"
+commit = !git commit --date=\"$(date --utc +%Y-%m-%dT%H:%M:%S%z)\"
+
+first-commit = rev-list --max-parents=0 HEAD
+
+serve = ! echo "Serving ${PWD} on git://localhost:9418/" && git daemon --verbose --reuseaddr --export-all --base-path=. .
+
+
+[push]
+	followTags = true
+[merge]
+	conflictStyle = diff3
+[branch]
+	autoSetupMerge = always
+[rebase]
+    autostash = true
+[diff]
+    algorithm = histogram
