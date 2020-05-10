@@ -95,6 +95,8 @@ zle -N copy-earlier-word
 bindkey '^[,' copy-earlier-word
 
 
+# Disable time builtin.
+disable -r time
 
 # Set timezone for git in shell.
 git(){ TZ=UTC command git "$@"; }
