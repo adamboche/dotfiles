@@ -94,3 +94,7 @@ pip-wheel-metadata/
 
 # Nix
 result
+
+
+# Lean
+.olean
