@@ -156,7 +156,7 @@ dir_color="$(tput setaf 6)"
 
 
 setopt promptsubst # needed for \$ evaluation
-PS1='%{$user_color%}%n%{$reset_color%}%{$bold%}@%{$reset_color%}%{$host_color%}%m:%{$dir_color%}%2~%{$reset_color%}%{$bold%}$(print-git-branch)%{$reset_color%}:%{$RANGER_SESSION%}%{$bold_color%}\$%{$reset_color%} '
+PS1='%{$user_color%}%n%{$reset_color%}%{$bold%}@%{$reset_color%}%{$host_color%}%m:%{$dir_color%}%2~%{$reset_color%}%{$bold%}$(print-git-branch)%{$reset_color%}:%{$RANGER_SESSION%}%{$bold_color%}%%%{$reset_color%} '
 
 
 # Ensure comments are readable on dark background.
