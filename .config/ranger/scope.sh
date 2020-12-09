@@ -109,6 +109,19 @@ handle_extension() {
             python -m json.tool -- "${FILE_PATH}" && exit 5
             ;;
 
+
+        ## CSV
+        csv)
+            head -n1000 "${FILE_PATH}" | xsv table && exit 5
+            ;;
+
+        ## TSV
+        tsv)
+            head -n1000 "${FILE_PATH}" | xsv table -d'\t' && exit 5
+            ;;
+
+
+
         ## Direct Stream Digital/Transfer (DSDIFF) and wavpack aren't detected
         ## by file(1).
         dff|dsf|wv|wvc)
