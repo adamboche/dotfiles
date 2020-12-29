@@ -73,6 +73,9 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=6
 # HIST_IGNORE_ALL_DUPS or HIST_EXPIRE_DUPS_FIRST"
 # ZSH_AUTOSUGGEST_STRATEGY=match_prev_cmd
 
+# Set history file location.
+HISTFILE=~/.cache/zsh/zsh_history
+
 
 # C-x C-e to open editor
 autoload -U edit-command-line
