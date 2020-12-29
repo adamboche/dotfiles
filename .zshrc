@@ -149,14 +149,17 @@ string_to_color() {
 
 bold="$(tput bold)"
 reset_color="$(tput sgr0)"
-
 user_color="$(string_to_color "$USER")"
 host_color="$(string_to_color "$(hostname)")"
 dir_color="$(tput setaf 6)"
 
+red="$(tput setaf 1)"
+green="$(tput setaf 2)"
+# If previous status was 0 then green else red.
+prompt_symbol_color="%(?.%{$green%}.%{$red%})"
 
 setopt promptsubst # needed for \$ evaluation
-PS1='%{$user_color%}%n%{$reset_color%}%{$bold%}@%{$reset_color%}%{$host_color%}%m:%{$dir_color%}%2~%{$reset_color%}%{$bold%}$(print-git-branch)%{$reset_color%}:%{$RANGER_SESSION%}%{$bold_color%}%%%{$reset_color%} '
+PS1='%{$user_color%}%n%{$reset_color%}%{$bold%}@%{$reset_color%}%{$host_color%}%m:%{$dir_color%}%2~%{$reset_color%}%{$bold%}$(print-git-branch)%{$reset_color%}:%{$RANGER_SESSION%}%{$bold_color%}%{$prompt_symbol_color%}%%%{$reset_color%} '
 
 
 # Ensure comments are readable on dark background.
