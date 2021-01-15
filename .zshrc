@@ -29,6 +29,10 @@ setopt interactivecomments
 # IGNOREEOF forces the user to type exit or logout, instead of just pressing ^D.
 # setopt IGNOREEOF
 
+# https://github.com/ohmyzsh/ohmyzsh/issues/5108
+# Break movement on path separator slash.
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
 
 # zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
