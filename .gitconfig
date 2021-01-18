@@ -37,3 +37,5 @@ serve = ! echo "Serving ${PWD} on git://localhost:9418/" && git daemon --verbose
     autostash = true
 [diff]
     algorithm = histogram
+[pull]
+ff = only
