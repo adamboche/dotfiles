@@ -1,2 +1,8 @@
 h left-scroll
 l right-scroll
+
+
+# Wrap around search.
+# https://unix.stackexchange.com/a/621514/450798
+/ forw-search ^W
+? back-search ^W
