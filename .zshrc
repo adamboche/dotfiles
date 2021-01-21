@@ -32,6 +32,9 @@ setopt inc_append_history
 # Ignore "# comments" typed or pasted into an interactive shell
 setopt interactivecomments
 
+# Quote URIs.
+autoload -Uz url-quote-magic
+zle -N self-insert url-quote-magic
 # IGNOREEOF forces the user to type exit or logout, instead of just pressing ^D.
 # setopt IGNOREEOF
 
