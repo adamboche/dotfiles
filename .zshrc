@@ -1,5 +1,5 @@
 # Use a simple prompt for emacs TRAMP.
-[[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && return
+[[ $TERM == "dumb" ]] && unsetopt zle && PS1='% ' && return
 
 
 umask 027
