@@ -35,6 +35,11 @@ setopt interactivecomments
 # Quote URIs.
 autoload -Uz url-quote-magic
 zle -N self-insert url-quote-magic
+
+# Setup bracketed paste.
+autoload -Uz bracketed-paste-magic
+zle -N bracketed-paste bracketed-paste-magic
+
 # IGNOREEOF forces the user to type exit or logout, instead of just pressing ^D.
 # setopt IGNOREEOF
 
