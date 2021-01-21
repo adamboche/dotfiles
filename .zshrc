@@ -11,7 +11,13 @@ set +o histexpand
 autoload -U add-zsh-hook
 
 # Automatically show directory contents when changing directory.
-add-zsh-hook -Uz chpwd (){ exa -a; }
+add-zsh-hook -Uz chpwd (){
+    if [[ type exa ]] &> /dev/null; then
+        exa -a
+    else
+        ls -a
+    fi
+}
 
 # Make ctrl-backspace delete a whole word
 bindkey '^H' backward-kill-word
