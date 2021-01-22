@@ -37,3 +37,6 @@ message(msg, libs, sep = "")
 ## Don’t Let R Blow Up your Console
 ## Did you really want to see all 10000 elements of that list? Probably not, right? Use:
 options(max.print = 1000)
+
+# Set terminal width.
+options("width"=200)
