@@ -30,6 +30,10 @@ venvbin () {
     which "$1" | xargs realpath | xargs dirname
 }
 
+# Change into a shell in a temporary directory.
+cdt(){
+    cd $(mktemp -d)
+}
 
 colors256() {
 	local c i j
