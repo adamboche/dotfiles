@@ -1,10 +1,6 @@
 #!/bin/bash
 
 
-# safety
-#alias rm="echo Use 'del', or the full path i.e. '/bin/rm'"
-
-
 # ssh into tmux session
 st ()  { ssh "$1" -t tmux new-session -A -s 0 ; stty sane ; }
 
@@ -12,8 +8,6 @@ st ()  { ssh "$1" -t tmux new-session -A -s 0 ; stty sane ; }
 # https://github.com/lf94/peek-for-tmux
 peek() { tmux split-window -p 33 "$EDITOR" "$@" || exit; }
 
-# check if command exists
-cmdexists() { command -v "$1" >/dev/null 2>&1 ; }
 
 # make sshfs
 mksshfs() {
