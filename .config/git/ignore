@@ -70,7 +70,11 @@ venv.bak/
 *.bbl
 *.blg
 *.brf
-
+*.bcf
+*.run.xml
+*.fdb_latexmk
+*.out
+*.fls
 
 # jupyter
 .ipynb_checkpoints
