@@ -93,6 +93,9 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=6
 
 # Set history file location.
 HISTFILE=~/.local/share/zsh/zsh_history
+# Set history size.
+HISTSIZE=1000000
+SAVEHIST=1000000
 
 
 # C-x C-e to open editor
