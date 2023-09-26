@@ -40,6 +40,10 @@ zle -N self-insert url-quote-magic
 autoload -Uz bracketed-paste-magic
 zle -N bracketed-paste bracketed-paste-magic
 
+# Use cd stack.
+setopt autopushd
+alias po='popd'
+
 # IGNOREEOF forces the user to type exit or logout, instead of just pressing ^D.
 # setopt IGNOREEOF
 
