@@ -22,11 +22,7 @@ unstage = reset HEAD --
 last = log -1 HEAD
 utccommit = !git commit --date=\"$(date --utc +%Y-%m-%dT%H:%M:%S%z)\"
 commit = !git commit --date=\"$(date --utc +%Y-%m-%dT%H:%M:%S%z)\"
-
 first-commit = rev-list --max-parents=0 HEAD
-
-serve = ! echo "Serving ${PWD} on git://localhost:9418/" && git daemon --verbose --reuseaddr --export-all --base-path=. .
-
 
 [push]
 	followTags = true
