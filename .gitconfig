@@ -2,7 +2,8 @@
 	name = adamboche
 	email = adamboche@gmail.com
 [core]
-	editor = emacs
+	editor = hx
+	visual = code
 
 
 
