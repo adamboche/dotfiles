@@ -36,3 +36,6 @@ first-commit = rev-list --max-parents=0 HEAD
     algorithm = histogram
 [pull]
 ff = only
+
+[init]
+defaultBranch = main
