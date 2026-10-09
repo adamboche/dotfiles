@@ -88,7 +88,7 @@ _comp_options+=(globdots)
 
 
 # https://github.com/zsh-users/zsh-autosuggestions#configuration
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=6
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=cyan
 # "Chooses the most recent match whose preceding history item matches the most
 # recently executed command (more info). Note that this strategy won't work as
 # expected with ZSH options that don't preserve the history order such as
